@@ -6,7 +6,7 @@ let listarPeliculas = async () => {
     console.log("listar pelis");
 
     try {
-        const peticion = await fetch("http://localhost:8090/api/peliculas", {
+        const peticion = await fetch("http://localhost:8090/api/peliculas",  {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
