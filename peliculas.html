@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Registro de Películas</title>
+    <link rel="stylesheet" href="peliculasCSS.css" />
+    <script defer src="peliculasJs.js"></script> <!-- Asegurarse de que el script se cargue después del HTML -->
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+            <form id="registroForm"> <!-- Añadir un ID para el formulario -->
+                <div class="formbold-form-title">
+                    <h2>Registro de Películas</h2>
+                    <p>Acceso al registro de Películas.</p>
+                </div>
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="titulo" class="formbold-form-label">Título</label>
+                        <input type="text" name="titulo" id="titulo" placeholder="Titanic" class="formbold-form-input" required />
+                    </div>
+                    <div>
+                        <label for="autor" class="formbold-form-label">Autor</label>
+                        <input type="text" name="autor" id="autor" placeholder="Steven Spielberg" class="formbold-form-input" required />
+                    </div>
+                </div>
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="genero" class="formbold-form-label">Género</label>
+                        <input type="text" name="genero" id="genero" placeholder="Drama" class="formbold-form-input" required />
+                    </div>
+                </div>
+                <button type="submit" id="btnRegistrar" class="formbold-btn">Registrarse ahora</button>
+                <button onclick="irAFormulario()" class="formbold-btn">Listado de Pelis</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
