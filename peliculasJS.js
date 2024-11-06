@@ -18,7 +18,7 @@ let registrarPelicula = async () => {
     console.log("Campos a registrar:", campos);
     try {
         // Hacer la petición POST al servidor
-        const respuesta = await fetch("http://localhost:8090/api/peliculas", {
+        const respuesta = await fetch("http://localhost:8090/api/pelicula", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

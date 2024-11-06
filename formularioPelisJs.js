@@ -6,7 +6,7 @@ let listarPeliculas = async () => {
     console.log("listar pelis");
 
     try {
-        const peticion = await fetch("http://localhost:8090/api/peliculas",{
+        const peticion = await fetch("http://localhost:8090/api/pelicula",{
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -111,7 +111,7 @@ let aplicarActualizacion = async (id) => {
     campos.autor = document.getElementById("autor").value;
     campos.genero =document.getElementById("genero").value;
 
-    const peticion = await fetch(`http://localhost:8090/api/peliculas`, {
+    const peticion = await fetch(`http://localhost:8090/api/pelicula`, {
         
         method: 'PUT',
         headers: {
