@@ -1,40 +1,68 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+}
+
+/* Estilo de la tabla */
 table {
   text-align: left;
   line-height: 40px;
   border-collapse: separate;
   border-spacing: 0;
-  border: 2px solid #421ced;
-  width: 80%; /* Ajustar el ancho de la tabla al 100% */
+  border: 2px solid #2f6f2f; /* Borde verde oscuro */
+  width: 80%; /* Ajuste el ancho de la tabla */
   margin: 50px auto;
   border-radius: .25rem;
 }
 
+/* Fila del título "Peliculas" */
 thead tr:first-child {
-  background: #421ced;
+  background: #4d4d4d; /* Gris oscuro */
   color: #fff;
-  border: none;
+  text-align: center; /* Centrar el texto */
+  font-size: 18px; /* Aumentar el tamaño del texto */
+  font-weight: bold; /* Hacer el texto más grueso */
 }
 
-thead tr:last-child th {
-  border-bottom: 3px solid #ddd;
+/* Fila de los títulos (encabezados de la tabla) */
+thead tr:last-child {
+  background: #d3d3d3; /* Gris claro */
+  color: #333;
 }
 
 /* Alineación de las celdas */
 th, td {
   padding: 10px; /* Añadir padding consistente */
-  text-align: left; /* Asegurarte de que todas las celdas estén alineadas a la izquierda */
+  text-align: left; /* Asegúrate de que todas las celdas estén alineadas a la izquierda */
 }
 
 th {
   font-weight: 500;
 }
 
-/* Para el hover en filas */
+/* Alternancia de colores de las filas */
+tbody tr:nth-child(odd) {
+  background-color: #b7e3b7; /* Verde claro */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #a0d8a0; /* Verde más oscuro */
+}
+
+/* Efecto al pasar el ratón (hover) */
 tbody tr:hover {
-  background-color: #f2f2f2;
+  background-color: #80c080; /* Resaltar la fila con un verde más fuerte */
   cursor: pointer;
 }
 
+/* Estilos de los botones */
 button {
   cursor: pointer;
 }
