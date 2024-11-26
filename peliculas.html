@@ -2,17 +2,74 @@
 <html lang="es">
 <head>
     <meta charset="utf-8" />
-    <title>Registro de Películas</title>
+    <title>Películas - Registro e Ingreso</title>
     <link rel="stylesheet" href="peliculasCSS.css" />
-    <script defer src="peliculasJs.js"></script> <!-- Asegurarse de que el script se cargue después del HTML -->
+    <script defer src="peliculasJs.js"></script>
 </head>
 <body>
-    <div class="formbold-main-wrapper">
+    <!-- Formulario de Login -->
+    <div id="loginFormContainer" class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
-            <form id="registroForm"> <!-- Añadir un ID para el formulario -->
+            <form id="loginUsuarioForm">
                 <div class="formbold-form-title">
-                    <h2>Registro de Películas</h2>
-                    <p>Acceso al registro de Películas.</p>
+                    <h2>Iniciar Sesión</h2>
+                    <p>Accede para registrar películas.</p>
+                </div>
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="loginEmail" class="formbold-form-label">Correo Electrónico</label>
+                        <input type="email" name="loginEmail" id="loginEmail" placeholder="juan@ejemplo.com" class="formbold-form-input" required />
+                    </div>
+                </div>
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="loginPassword" class="formbold-form-label">Contraseña</label>
+                        <input type="password" name="loginPassword" id="loginPassword" placeholder="********" class="formbold-form-input" required />
+                    </div>
+                </div>
+                <button type="submit" id="btnLogin" class="formbold-btn">Iniciar Sesión</button>
+                <p>No tienes una cuenta? <a href="#" id="irARegistro">Regístrate</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Formulario de Registro de Usuario -->
+    <div id="registroUsuarioFormContainer" class="formbold-main-wrapper" style="display: none;">
+        <div class="formbold-form-wrapper">
+            <form id="registroUsuarioForm">
+                <div class="formbold-form-title">
+                    <h2>Registro de Usuario</h2>
+                    <p>Accede al sistema para poder registrar películas.</p>
+                </div>
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="name" class="formbold-form-label">Nombre</label>
+                        <input type="text" name="name" id="name" placeholder="Juan Pérez" class="formbold-form-input" required />
+                    </div>
+                    <div>
+                        <label for="email" class="formbold-form-label">Correo Electrónico</label>
+                        <input type="email" name="email" id="email" placeholder="juan@ejemplo.com" class="formbold-form-input" required />
+                    </div>
+                </div>
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="password" class="formbold-form-label">Contraseña</label>
+                        <input type="password" name="password" id="password" placeholder="********" class="formbold-form-input" required />
+                    </div>
+                </div>
+                <button type="submit" id="btnRegistrarUsuario" class="formbold-btn">Registrar Usuario</button>
+                <p>¿Ya tienes cuenta? <a href="#" id="irALogin">Iniciar Sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Formulario de Registro de Película (oculto hasta iniciar sesión) -->
+    <div id="formRegistrarPelicula" style="display: none;">
+        <div class="formbold-form-wrapper">
+            <form id="registroPeliculaForm">
+                <div class="formbold-form-title">
+                    <h2>Registrar Película</h2>
+                    <p>Accede para registrar una nueva película.</p>
                 </div>
                 <div class="formbold-input-flex">
                     <div>
@@ -30,11 +87,17 @@
                         <input type="text" name="genero" id="genero" placeholder="Drama" class="formbold-form-input" required />
                     </div>
                 </div>
-                <button type="submit" id="btnRegistrar" class="formbold-btn">Registrarse ahora</button>             
+                <button type="submit" id="btnRegistrarPelicula" class="formbold-btn">Registrar Película</button>
+
             </form>
-                <button onclick="irAFormulario()" class="formbold-btn">Listado de Pelis</button>
+            <button onclick="irAFormulario()" class="formbold-btn">Listado de Pelis</button>
         </div>
+
     </div>
-    
+                             <!-- Botón de Logout -->
+                <div id="logoutButtonContainer" style="display: none;">
+                    <button id="btnLogout" class="formbold-btn">Cerrar Sesión</button>
+                </div>   
+
 </body>
 </html>
